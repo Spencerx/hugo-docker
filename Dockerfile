@@ -9,13 +9,14 @@ RUN mkdir -p ~/opt/packages/hugo && cd $_
 
 RUN wget https://github.com/spf13/hugo/releases/download/v0.16/hugo_0.16_linux-64bit.tgz
 
-RUN gzip -dc hugo_0.13_linux_amd64.tar.gz | tar xf -
+RUN tar xvzf hugo_0.16_linux-64bit.tgz
+RUN ls -al
 
-RUN rm hugo_0.13_linux_amd64.tar.gz
+RUN rm hugo_0.16_linux-64bit.tgz
 
 RUN mkdir ~/bin
 
-RUN ln -s ~/opt/packages/hugo/hugo_0.13_linux_amd64/hugo_0.13_linux_amd64 ~/bin/hugo
+RUN ln -s ~/opt/packages/hugo/hugo_0.16_linux_amd64/hugo_0.16_linux_amd64 ~/bin/hugo
 
 RUN source ~/.profile
 
