@@ -16,6 +16,4 @@ RUN rm hugo_0.16_linux-64bit.tgz
 
 RUN ln -s ~/opt/packages/hugo/hugo_0.16_linux_amd64/hugo_0.16_linux_amd64 /usr/bin/hugo
 
-RUN which hugo
-
 RUN hugo version
