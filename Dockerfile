@@ -2,20 +2,20 @@ FROM ubuntu:latest
 
 MAINTAINER Caleb Washburn "cwashburn@pivotal.io"
 
-mkdir -p ~/opt/packages/hugo && cd $_
+RUN mkdir -p ~/opt/packages/hugo && cd $_
 
-wget https://github.com/spf13/hugo/releases/download/v0.13/hugo_0.13_linux_amd64.tar.gz
+RUN wget https://github.com/spf13/hugo/releases/download/v0.13/hugo_0.13_linux_amd64.tar.gz
 
-gzip -dc hugo_0.13_linux_amd64.tar.gz | tar xf -
+RUN gzip -dc hugo_0.13_linux_amd64.tar.gz | tar xf -
 
-rm hugo_0.13_linux_amd64.tar.gz
+RUN rm hugo_0.13_linux_amd64.tar.gz
 
-mkdir ~/bin
+RUN mkdir ~/bin
 
-ln -s ~/opt/packages/hugo/hugo_0.13_linux_amd64/hugo_0.13_linux_amd64 ~/bin/hugo
+RUN ln -s ~/opt/packages/hugo/hugo_0.13_linux_amd64/hugo_0.13_linux_amd64 ~/bin/hugo
 
-source ~/.profile
+RUN source ~/.profile
 
-which hugo
+RUN which hugo
 
-hugo version
+RUN hugo version
