@@ -7,7 +7,7 @@ RUN apt-get install -y wget
 
 RUN mkdir -p ~/opt/packages/hugo && cd $_
 
-RUN wget https://github.com/spf13/hugo/releases/download/v0.16/hugo_0.16_linux_amd64.tar.gz
+RUN wget https://github.com/spf13/hugo/releases/download/v0.16/hugo_0.16_linux-64bit.tgz
 
 RUN gzip -dc hugo_0.13_linux_amd64.tar.gz | tar xf -
 
