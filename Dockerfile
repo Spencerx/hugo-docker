@@ -14,11 +14,7 @@ RUN ls -al
 
 RUN rm hugo_0.16_linux-64bit.tgz
 
-RUN mkdir ~/bin
-
-RUN ln -s ~/opt/packages/hugo/hugo_0.16_linux_amd64/hugo_0.16_linux_amd64 ~/bin/hugo
-
-RUN source ~/.profile
+RUN ln -s ~/opt/packages/hugo/hugo_0.16_linux_amd64/hugo_0.16_linux_amd64 /usr/bin/hugo
 
 RUN which hugo
 
